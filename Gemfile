@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
+gem 'pg', '~> 0.21'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -42,9 +42,9 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 
-  # Coffee script 1.9.0 doesn't play well with Windows.
+  # Coffee script 1.12.2 doesn't play well with Windows.
   # On my Windows 7 machine, using version 1.8.0 solves this problem.
-  gem 'coffee-script-source', '1.8.0'
+  gem 'coffee-script-source', '1.8.0', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
   # Conver html into haml.
   gem 'html2haml'

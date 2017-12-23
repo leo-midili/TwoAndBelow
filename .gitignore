@@ -17,4 +17,9 @@
 /yarn-error.log
 
 .byebug_history
+
+# Ignore local environment variables
 .env
+
+# Ignore RubyMine files
+/.idea
