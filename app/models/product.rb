@@ -13,6 +13,6 @@ private
   end
 
   def discontinued_not_before
-    errors.add(:discontinued_on, "can't exist before the available on date") if discontinued_on < available_on
+    errors.add(:discontinued_on, "can't exist before the available on date") if discontinued_on && discontinued_on < available_on
   end
 end
