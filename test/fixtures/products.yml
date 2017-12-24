@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  quantity: 1
+  in_stock: false
+  available_on: 2017-12-24
+  discontinued_on: 2017-12-24
+
+two:
+  name: MyString
+  description: MyText
+  quantity: 1
+  in_stock: false
+  available_on: 2017-12-24
+  discontinued_on: 2017-12-24
