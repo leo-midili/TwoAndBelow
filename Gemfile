@@ -42,12 +42,15 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 
-  # Coffee script 1.12.2 doesn't play well with Windows.
-  # On my Windows 7 machine, using version 1.8.0 solves this problem.
+  # Coffee script 1.12.2 doesn't play well with Windows
+  # On my Windows 7 machine, using version 1.8.0 solves this problem
   gem 'coffee-script-source', '1.8.0', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-  # Conver html into haml.
+  # Conver html into haml
   gem 'html2haml'
+
+  # Load the .env files
+  gem 'dotenv-rails'
 end
 
 group :development do
