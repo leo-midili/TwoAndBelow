@@ -24,8 +24,12 @@ default: &default
 development:
   <<: *default
   database: TwoAndBelowRails_development
-  username: <%= ENV.fetch('PG_USERNAME') {''} %>
-  password: <%= ENV.fetch('PG_PASSWORD') {''} %>
+  <% if ENV['PG_USERNAME'] %>
+    username: <%= ENV['PG_USERNAME'] %>
+  <% end %>
+  <% if ENV['PG_PASSWORD'] %>
+    password: <%= ENV['PG_PASSWORD'] %>
+  <% end %>
   host: localhost
   pool: 5
   timeout: 5000
