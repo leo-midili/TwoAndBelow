@@ -7,6 +7,7 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.boolean :for_sale, default: true
       t.date :available_on, null: false
       t.date :discontinued_on
+      t.text :image_data
 
       t.timestamps
     end

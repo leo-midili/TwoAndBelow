@@ -1,6 +1,8 @@
 class Product < ApplicationRecord
   before_validation :set_quantity_if_null
 
+  include ImageUploader::Attachment.new(:image)
+
   validates :name, presence: true
   validates :quantity, numericality: true
   validates :available_on, presence: true

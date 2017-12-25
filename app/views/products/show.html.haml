@@ -18,6 +18,8 @@
 %p
   %b Discontinued on:
   = @product.discontinued_on
+%p
+  = image_tag @product.image_url(:medium) if @product.image_data?
 
 = link_to 'Edit', edit_product_path(@product)
 \|

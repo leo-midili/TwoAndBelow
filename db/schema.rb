@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20171224163540) do
     t.boolean "for_sale", default: true
     t.date "available_on", null: false
     t.date "discontinued_on"
+    t.text "image_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

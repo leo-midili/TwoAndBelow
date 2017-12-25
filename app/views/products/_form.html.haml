@@ -5,6 +5,8 @@
       %ul
         - @product.errors.full_messages.each do |message|
           %li= message
+  -# Required by shrine to display cached images on page reloads
+  = f.hidden_field :image, value: f.object.cached_image_data
 
   .field
     = f.label :name
@@ -16,13 +18,25 @@
     = f.label :quantity
     = f.number_field :quantity
   .field
-    = f.check_box :for_sale
-    = f.label :for_sale, 'Currently for sale'
+    = f.label :for_sale do
+      = f.check_box :for_sale
+      Currently for sale
   .field
     = f.label :available_on
     = f.date_select :available_on
   .field
     = f.label :discontinued_on
     = f.date_select :discontinued_on, prompt: { year: 'Year', month: 'Month', day: 'Day' }
+  .field
+    = f.label :image, 'Upload image'
+    = f.file_field :image
+
+    - if f.object.image_data?
+      = image_tag f.object.image_url(:medium)
+      %br/
+      .field
+        = f.label :remove_image do
+          = f.check_box :remove_image
+          Remove image
   .actions
     = f.submit 'Save'
