@@ -6,6 +6,9 @@ class SitesController < ApplicationController
   def about
   end
 
+  def veggies
+  end
+  
   def dad
   end
 end
