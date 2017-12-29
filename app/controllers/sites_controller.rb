@@ -14,5 +14,4 @@ class SitesController < ApplicationController
 
   def coloring_pages
   end
-
 end
