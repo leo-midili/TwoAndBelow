@@ -8,7 +8,11 @@ class SitesController < ApplicationController
 
   def veggies
   end
-  
+
   def dad
   end
+
+  def coloring_pages
+  end
+
 end
