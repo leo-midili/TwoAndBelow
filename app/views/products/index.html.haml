@@ -5,8 +5,10 @@
     %tr
       %th Name
       %th Description
+      %th Price
+      %th Category
       %th Quantity
-      %th Currently for sale
+      %th For sale
       %th Available on
       %th Discontinued on
       %th Image
@@ -19,6 +21,8 @@
       %tr
         %td= product.name
         %td= product.description
+        %td= number_to_currency(product.price)
+        %td= product.category
         %td= product.quantity
         %td= product.for_sale
         %td= product.available_on

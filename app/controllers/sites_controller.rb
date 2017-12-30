@@ -1,6 +1,6 @@
 class SitesController < ApplicationController
   def home
-    @name = 'Leo Midili'
+    @products = Product.all.for_sale
   end
 
   def about

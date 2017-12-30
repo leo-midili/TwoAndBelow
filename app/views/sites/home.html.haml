@@ -56,5 +56,9 @@
     Carrots
     %br/
     %img.small{:alt => "Carrots", :src => "assets/carrots.jpg"}/
+
+%ul.menu
+  - @products.each do |product|
+    = render 'products/list', product: product
 %p This is the veggies we are selling that I "leo" know of.
 %p Made by the owners Leo, Gryphen, Dean, Daddy and Lisa!

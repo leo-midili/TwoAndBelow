@@ -7,6 +7,12 @@
   %b Description:
   = @product.description
 %p
+  %b Price:
+  = number_to_currency(@product.price)
+%p
+  %b Category:
+  = @product.category
+%p
   %b Quantity:
   = @product.quantity
 %p

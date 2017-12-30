@@ -15,6 +15,12 @@
     = f.label :description
     = f.text_area :description
   .field
+    = f.label :price
+    = f.number_field :price, step: 0.01
+  .field
+    = f.label :category
+    = f.text_field :category
+  .field
     = f.label :quantity
     = f.number_field :quantity
   .field
