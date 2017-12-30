@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'haml-rails', '~> 1.0.0'
+gem 'devise'
 
 # shrine
 gem 'shrine', '~> 2.8.0'

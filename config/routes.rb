@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users, skip: [:registration]
+
   root to: 'sites#home'
 
   get :about, to: 'sites#about'
   get :dad, to: 'sites#dad'
   get :veggies, to: 'sites#veggies'
   get :coloring_pages, to: "sites#coloring_pages"
+  get :admin, to: redirect('/users/sign_in')
 
   resources :products
   resources :categories
