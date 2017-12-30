@@ -9,6 +9,11 @@
   = f.hidden_field :image, value: f.object.cached_image_data
 
   .field
+    = f.label :category_id
+    = f.select :category_id, Category.select_options, prompt: '-Select-'
+    or
+    = link_to 'Manage Categories', categories_path
+  .field
     = f.label :name
     = f.text_field :name
   .field
@@ -17,9 +22,6 @@
   .field
     = f.label :price
     = f.number_field :price, step: 0.01
-  .field
-    = f.label :category_id
-    = f.select :category_id, Category.select_options, prompt: '-Select-'
   .field
     = f.label :quantity
     = f.number_field :quantity

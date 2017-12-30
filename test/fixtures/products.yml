@@ -1,17 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyText
+  name: MyString1
+  description: MyText1
+  price: 1.00
   quantity: 1
-  in_stock: false
+  for_sale: false
   available_on: 2017-12-24
   discontinued_on: 2017-12-24
+  category: one
 
 two:
-  name: MyString
-  description: MyText
+  name: MyString2
+  description: MyText2
+  price: 2.00
   quantity: 1
-  in_stock: false
+  for_sale: false
   available_on: 2017-12-24
   discontinued_on: 2017-12-24
+  category: two
