@@ -1,7 +1,7 @@
 class Category < ApplicationRecord
   has_many :products
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 
   def self.select_options
     all.map { |c| [ c.name, c.id ] }
