@@ -21,6 +21,17 @@ p {
   color: red;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+  &, th, td {
+    border: 1px solid antiquewhite;
+  }
+  th {
+    color: blue;
+  }
+}
+
 .small {
   height: 100px
 

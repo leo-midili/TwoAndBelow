@@ -1,4 +1,8 @@
-%h1 Listing products
+%p#notice= notice
+
+%h1
+  = @category.name
+  Products
 
 %table
   %thead
@@ -17,9 +21,9 @@
       %th
 
   %tbody
-    - @products.each do |product|
+    - @category.products.each do |product|
       = render 'products/table_data', product: product
 
-%br
-
-= link_to 'New Product', new_product_path
+= link_to 'Edit', edit_category_path(@category)
+\|
+= link_to 'Back', categories_path

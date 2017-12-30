@@ -18,8 +18,8 @@
     = f.label :price
     = f.number_field :price, step: 0.01
   .field
-    = f.label :category
-    = f.text_field :category
+    = f.label :category_id
+    = f.select :category_id, Category.select_options, prompt: '-Select-'
   .field
     = f.label :quantity
     = f.number_field :quantity

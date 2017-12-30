@@ -1,0 +1,13 @@
+%tr
+  %td= product.name
+  %td= product.description
+  %td= number_to_currency(product.price)
+  %td= link_to product.category.name, product.category
+  %td= product.quantity
+  %td= product.for_sale
+  %td= product.available_on
+  %td= product.discontinued_on
+  %td= image_tag product.image_url(:thumb) if product.image_data?
+  %td= link_to 'Show', product
+  %td= link_to 'Edit', edit_product_path(product)
+  %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }

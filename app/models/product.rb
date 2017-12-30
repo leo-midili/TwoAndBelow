@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+  belongs_to :category
+
   before_validation :set_quantity_if_null
   before_validation :set_price_if_null
 
@@ -7,7 +9,6 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :price, numericality: true
   validates :quantity, numericality: true
-  validates :category, presence: true
   validates :available_on, presence: true
   validate :discontinued_not_before
 
