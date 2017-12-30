@@ -20,7 +20,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       post products_url, params: { product: { category_id: @product.category.id, available_on: @product.available_on, description: @product.description, discontinued_on: @product.discontinued_on, for_sale: @product.for_sale, name: @product.name, quantity: @product.quantity } }
     end
 
-    assert_redirected_to product_url(Product.last)
+    assert_redirected_to products_url
   end
 
   test "should show product" do
@@ -35,7 +35,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test "should update product" do
     patch product_url(@product), params: { product: { available_on: @product.available_on, description: @product.description, discontinued_on: @product.discontinued_on, for_sale: @product.for_sale, name: @product.name, quantity: @product.quantity } }
-    assert_redirected_to product_url(@product)
+    assert_redirected_to products_url
   end
 
   test "should destroy product" do
