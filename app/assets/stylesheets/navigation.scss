@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #nav {
   min-height: 53px;
   width: 100%;
@@ -67,60 +66,3 @@
     }
   }
 }
-=======
-#nav {
-  min-height: 53px;
-  width: 100%;
-  background-color: black;
-  margin-bottom: 20px !important;
-}
-
-#nav li {
-  height: inherit;
-  display: inline-block;
-  padding: 0;
-}
-
-#nav a {
-  height: 27px;
-  line-height: 27px;
-  padding: 13px 16px;
-  display: block;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-}
-
-#nav a:hover {
-  background-color: #8cffd1;
-
-}
-
-#nav a.active {
-  background-color: #ff0000;
-}
-
-#nav ul.top-bar-title {
-  height: inherit;
-  float: left;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-#nav ul.top-bar-title a {
-  font-size: 27px;
-}
-
-#nav ul.top-bar {
-  height: inherit;
-  float: right;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-#nav ul.top-bar a {
-  font-size: 20px;
-}
->>>>>>> master
