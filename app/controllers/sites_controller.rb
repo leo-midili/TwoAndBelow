@@ -15,4 +15,11 @@ class SitesController < ApplicationController
   def coloring_pages
   end
 
+
+  def leo
+  end
+
+  def gryphen
+  end
+
 end
