@@ -7,7 +7,8 @@ ul {
 }
 
 body {
-    background-color: black;
+  background-color: black;
+  color: #F7F7F7;
 }
 
 h1,h2{
@@ -17,7 +18,18 @@ h1,h2{
 }
 
 p {
-    color: red;
+  color: red;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  &, th, td {
+    border: 1px solid antiquewhite;
+  }
+  th {
+    color: blue;
+  }
 }
 
 .small {

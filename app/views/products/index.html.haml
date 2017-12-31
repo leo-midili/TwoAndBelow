@@ -1,0 +1,27 @@
+%h1 Listing products
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Price
+      %th Category
+      %th Quantity
+      %th For sale
+      %th Available on
+      %th Discontinued on
+      %th Image
+      %th
+      %th
+      %th
+
+  %tbody
+    - @products.each do |product|
+      = render 'products/table_data', product: product
+
+%br
+
+= link_to 'New Product', new_product_path
+\|
+= link_to 'Manage Categories', categories_path

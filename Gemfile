@@ -33,7 +33,15 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'haml-rails'
+gem 'haml-rails', '~> 1.0.0'
+gem 'devise'
+
+# shrine
+gem 'shrine', '~> 2.8.0'
+gem 'image_processing', '~> 0.4.5'
+gem 'mini_magick', '~> 4.8.0'
+gem 'fastimage', '~> 2.1.0'
+gem 'aws-sdk', '~> 3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -47,10 +55,10 @@ group :development, :test do
   gem 'coffee-script-source', '1.8.0', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
   # Conver html into haml
-  gem 'html2haml'
+  gem 'html2haml' ,'~> 2.2.0'
 
   # Load the .env files
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', '~> 2.2.1'
 end
 
 group :development do
@@ -60,3 +68,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+ruby '2.4.3'
