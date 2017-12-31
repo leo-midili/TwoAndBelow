@@ -10,53 +10,52 @@
       %iframe{:allowfullscreen => "", :frameborder => "0", :height => "300", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d767.6987584964297!2d-75.105845!3d39.676825000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6d62ce4596ec9%3A0xa58a1a0fa4a00b44!2s11+East+Blvd%2C+Blackwood%2C+NJ+08012!5e0!3m2!1sen!2sus!4v1497633825048", :style => "border:0; pointer-events:none;", :width => "400"}
 %br/
 %p
-  %img{:alt => "Stand", :src => "assets/stand.jpg"}/
+  = image_tag('stand.jpg')
 %p You can come to our stand and buy any thing, just bring cash, no credit cards, just cash.
 %p There is music!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 %p
   Here is the garden to make the veggies we are selling. 100% organic!
   %br/
-  %img.large{:alt => "Garden", :src => "assets/garden.jpg"}/
-%h2 What we're growing
+  = image_tag("garden.jpg")
+  %h2 What we're growing
 %p Pricing and Availability
 %ul.menu
   %li
     Corn
     %br/
-    %img.small{:alt => "Corn", :src => "assets/corn.jpg"}/
+    = image_tag("corn.jpg", class: 'small')
   %li
     Jalapenos Peppers
     %br/
-    %img.small{:alt => "Jalapenos", :src => "assets/jalapenos.jpg"}/
+    = image_tag("jalapenos.jpg", class: "small")
   %li
     Tomatoes
     %br/
-    %img.small{:alt => "Tomatoes", :src => "assets/tomatoes.jpg"}/
+    = image_tag("tomatoes.jpg", class: "small")
   %li
     Cucumbers
     %br/
-    %img.small{:alt => "Cucumber", :src => "assets/cucumber.jpg"}/
+    = image_tag("cucumber.jpg", class: "small")
   %li
     Egg Plant
     %br/
-    %img.small{:alt => "Egg plant", :src => "assets/egg_plant.jpg"}/
+    = image_tag("egg_plant.jpg", class: "small")
   %li
     Zucchini
     %br/
-    %img.small{:alt => "Zucchini", :src => "assets/zucchini.jpg"}/
+    = image_tag("zucchini.jpg", class: "small")
   %li
     Red Bell Peppers
     %br/
-    %img.small{:alt => "Red peppers", :src => "assets/red_peppers.jpg"}/
+    = image_tag("red_peppers.jpg", class: "small")
   %li
     Spinach
     %br/
-    %img.small{:alt => "Spinach", :src => "assets/spinach.jpg"}/
+    = image_tag("spinach.jpg", class: "small")
   %li
     Carrots
     %br/
-    %img.small{:alt => "Carrots", :src => "assets/carrots.jpg"}/
-
+    = image_tag("carrots.jpg", class: "small")
 %ul.menu
   - @products.each do |product|
     = render 'products/list', product: product
