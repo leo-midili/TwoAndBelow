@@ -22,4 +22,7 @@ class SitesController < ApplicationController
   def gryphen
   end
 
+  def dean
+  end
+
 end

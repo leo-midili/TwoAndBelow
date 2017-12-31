@@ -1,20 +1,7 @@
--# Original HTML
--# <h1>Hi, I'm Dad</h1>
--# <p>I am also a programmer / carpenter / musican and poet.</p>
--# <p>
--#   You can see what I've programmed at
--#   <a href="https://ttfh.co" target="_blank">TheTinFoilHat.Co</a>
--#   .
--# </p>
-
-
--# HTML converted to HAML and Ruby on Rails
 %h1 Hi, I'm Dad
 %p I am also a programmer / carpenter / musican and poet.
 %p
   You can see what I've programmed at
   = succeed '.' do
     = link_to 'TheTinFoilHat.Co', 'https://ttfh.co', target: '_blank'
-
-  -# or you can use this
-  -# You can see what I've programmed at #{link_to 'TheTinFoilHat.Co', 'https://ttfh.co', target: '_blank'}.
+%p my favorite band is The Beatles

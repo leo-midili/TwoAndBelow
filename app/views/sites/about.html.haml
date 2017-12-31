@@ -1,9 +1,11 @@
 %h1 About us
 %p
-  %a{:href => "leo.html"} Leo
+  = link_to "Leo", leo_path
   likes red,
-  %a{:href => "gryphen.html"} Gryphen
+  = link_to"Gryphen", gryphen_path
   likes bule,
-  %a{:href => "dads.html"} Dad
-  likes red, Dean likes green.
+  = link_to"Dad", dad_path
+  likes red,
+  = link_to"Dean", dean_path 
+  likes green.
 %p All of us worked hard in the garden for us to sell veggies that are organic.
