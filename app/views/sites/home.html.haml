@@ -3,11 +3,12 @@
 %p Don't be mad if our stand is closed come on a Saturday.
 %br/
 .map_wrapper
-  %a.map_link{:href => "https://www.google.com/maps/place/11+East+Blvd,+Blackwood,+NJ+08012/@39.676825,\r\n  -75.105845,18z/data=!4m5!3m4!1s0x89c6d62ce4596ec9:0xa58a1a0fa4a00b44!8m2!3d39.676825!4d-75.105845?hl=en-US", :target => "_blank"}
+  = link_to google_map_link, class: 'map_link', target: '_blank' do
     We are located at 132 East Blvd, Glassboro, NJ
     %br/
     .map_iframe
-      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "300", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d767.6987584964297!2d-75.105845!3d39.676825000000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6d62ce4596ec9%3A0xa58a1a0fa4a00b44!2s11+East+Blvd%2C+Blackwood%2C+NJ+08012!5e0!3m2!1sen!2sus!4v1497633825048", :style => "border:0; pointer-events:none;", :width => "400"}
+      %iframe{allowfullscreen: "", frameborder: "0", height: "300", :width => "400",
+      src: google_map_image, style: "border:0; pointer-events:none;"}
 %br/
 %p
   = image_tag('stand.jpg')
