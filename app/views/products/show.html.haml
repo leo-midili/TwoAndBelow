@@ -1,18 +1,22 @@
-%p
-  %b Name:
-  = @product.name
-%p
-  %b Description:
-  = @product.description
-%p
-  %b Price:
-  = number_to_currency(@product.price)
-%p
-  %b Category:
-  = @product.category.name
-%p
-  %b Quantity:
-  = @product.quantity
+%h1= @product.name
+.grid
+  .span-1
+    .box
+      %b Description:
+      = @product.description
+.grid
+  .span-2
+    .box
+      %b Price:
+      = number_to_currency(@product.price)
+  .span-1
+    .box
+      %b Category:
+      = @product.category.name
+  .span-4
+    .box
+      %b Quantity:
+      = @product.quantity
 %p
   %b Currently for sale:
   = @product.for_sale
