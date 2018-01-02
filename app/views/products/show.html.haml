@@ -1,7 +1,8 @@
 %h1.center= @product.name
 .grid
   .span-2
-    = image_tag @product.image_url(:medium) if @product.image_data?
+    .box
+      = image_tag @product.image_url(:medium) if @product.image_data?
   .span-4
     .box
       .grid

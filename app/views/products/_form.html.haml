@@ -7,44 +7,53 @@
           %li= message
   -# Required by shrine to display cached images on page reloads
   = f.hidden_field :image, value: f.object.cached_image_data
+  .grid
+    .span-2
+      .box
+        .field
+          = f.label :image, 'Upload image'
+          = f.file_field :image
 
-  .field
-    = f.label :category_id
-    = f.select :category_id, Category.select_options, prompt: '-Select-'
-    or
-    = link_to 'Manage Categories', categories_path
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :description
-    = f.text_area :description
-  .field
-    = f.label :price
-    = f.number_field :price, step: 0.01
-  .field
-    = f.label :quantity
-    = f.number_field :quantity
-  .field
-    = f.label :for_sale do
-      = f.check_box :for_sale
-      Currently for sale
-  .field
-    = f.label :available_on
-    = f.date_select :available_on
-  .field
-    = f.label :discontinued_on
-    = f.date_select :discontinued_on, prompt: { year: 'Year', month: 'Month', day: 'Day' }
-  .field
-    = f.label :image, 'Upload image'
-    = f.file_field :image
-
-    - if f.object.image_data?
-      = image_tag f.object.image_url(:medium)
-      %br/
-      .field
-        = f.label :remove_image do
-          = f.check_box :remove_image
-          Remove image
-  .actions
-    = f.submit 'Save'
+        - if f.object.image_data?
+          .field
+            = image_tag f.object.image_url(:medium)
+          .field
+            = f.label :remove_image do
+              = f.check_box :remove_image
+              Remove image
+    .span-4
+      .box
+        .grid
+          .span-3
+            .field
+              = f.label :category_id
+              = f.select :category_id, Category.select_options, prompt: '-Select-'
+              or
+              = link_to 'Manage Categories', categories_path
+            .field
+              = f.label :name
+              = f.text_field :name
+            .field
+              = f.label :description
+              = f.text_area :description
+            .field
+              = f.label :price
+              = f.number_field :price, step: 0.01
+          .span-3
+            .field
+              = f.label :quantity
+              = f.number_field :quantity
+            .field
+              = f.label :for_sale do
+                = f.check_box :for_sale
+                Currently for sale
+            .field
+              = f.label :available_on
+              = f.date_select :available_on
+            .field
+              = f.label :discontinued_on
+              = f.date_select :discontinued_on, prompt: { year: 'Year', month: 'Month', day: 'Day' }
+  .grid
+    .span-6
+      .actions
+        = f.submit class: 'button'

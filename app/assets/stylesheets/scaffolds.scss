@@ -54,3 +54,18 @@ div {
     list-style: square;
   }
 }
+
+.field {
+  label, input[type="text"] {
+    display: block;
+  }
+}
+
+.button {
+  background-color: green;
+  border: solid 2px darkgreen;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  color: whitesmoke;
+}
