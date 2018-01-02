@@ -53,46 +53,17 @@ ul.menu li:last-child {
   margin-right: 0;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  margin-bottom: 10px;
-
-  /* on small screens */
-  .span-1 {
-    grid-column: span 4;
-  }
-  .span-2 {
-    grid-column: span 4;
-  }
-  .span-3 {
-    grid-column: span 4;
-  }
-  .span-4 {
-    grid-column: span 4;
-  }
-
-  /* larger than small screens */
-  @media (min-width: 30em) {
-    .span-1 {
-      grid-column: span 1;
-    }
-    .span-2 {
-      grid-column: span 2;
-    }
-    .span-3 {
-      grid-column: span 3;
-    }
-    .span-4 {
-      grid-column: span 4;
-    }
-  }
-}
-
 .box {
   background-color: #444;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.one-line-text {
+  white-space: nowrap;
 }

@@ -1,33 +1,31 @@
-%h1= @product.name
-.grid
-  .span-1
-    .box
-      %b Description:
-      = @product.description
+%h1.center= @product.name
 .grid
   .span-2
-    .box
-      %b Price:
-      = number_to_currency(@product.price)
-  .span-1
-    .box
-      %b Category:
-      = @product.category.name
+    = image_tag @product.image_url(:medium) if @product.image_data?
   .span-4
     .box
-      %b Quantity:
-      = @product.quantity
-%p
-  %b Currently for sale:
-  = @product.for_sale
-%p
-  %b Available on:
-  = @product.available_on
-%p
-  %b Discontinued on:
-  = @product.discontinued_on
-%p
-  = image_tag @product.image_url(:medium) if @product.image_data?
+      .grid
+        .span-3
+          %p
+            %b Description:
+            = @product.description
+          %p
+            %b Price:
+            = number_to_currency(@product.price)
+          %p
+            %b Quantity:
+            = @product.quantity
+        .span-3
+          %p
+            %b Category:
+            = @product.category.name
+          %p
+            = currently_for_sale(@product.for_sale)
+          %p
+            %b Available from:
+            %span.one-line-text #{@product.available_on} -
+            %span.one-line-text= @product.discontinued_on
+
 
 = link_to 'Edit', edit_product_path(@product)
 \|
