@@ -13,10 +13,11 @@ class Product < ApplicationRecord
   validates :available_on, format: { with: /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/,
                                      message: "date format : yyyy-mm-dd" }
   validates :discontinued_on, format: { with: /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/,
-                                        message: "date format : yyyy-mm-dd" }
+                                        message: "date format : yyyy-mm-dd" }, allow_nil: true
   validate :discontinued_not_before
 
   scope :for_sale, -> { where(for_sale: true) }
+  scope :by_category, -> (category) { joins(:category).where(categories: {name: category}) }
 
 private
 

@@ -1,23 +1,31 @@
-%h1 Listing categories
+%h1.center Listing categories
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th
-      %th
-      %th
-
-  %tbody
-    - @categories.each do |category|
+- if user_signed_in?
+  %table
+    %thead
       %tr
-        %td= category.name
-        %td= link_to 'Show', category
-        %td= link_to 'Edit', edit_category_path(category)
-        %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
+        %th Name
+        %th
+        %th
+        %th
+
+    %tbody
+      - @categories.each do |category|
+        %tr
+          %td= category.name
+          %td= link_to 'show', category
+          %td= link_to 'Edit', edit_category_path(category)
+          %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
+- else
+  %ul.menu
+    - @categories.each do |category|
+      %li
+        = link_to category do
+          .box
+            = category.name
 
 %br
-
-= link_to 'New Category', new_category_path
-\|
-= link_to 'Manage Products', products_path
+- if user_signed_in?
+  = link_to 'New Category', new_category_path
+  \|
+= link_to 'All Products', products_path

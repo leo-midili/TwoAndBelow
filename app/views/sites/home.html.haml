@@ -19,46 +19,13 @@
   %br/
   = image_tag("garden.jpg")
   %h2 What we're growing
-%p Pricing and Availability
-%ul.menu
-  %li
-    Corn
-    %br/
-    = image_tag("corn.jpg", class: 'small')
-  %li
-    Jalapenos Peppers
-    %br/
-    = image_tag("jalapenos.jpg", class: "small")
-  %li
-    Tomatoes
-    %br/
-    = image_tag("tomatoes.jpg", class: "small")
-  %li
-    Cucumbers
-    %br/
-    = image_tag("cucumber.jpg", class: "small")
-  %li
-    Egg Plant
-    %br/
-    = image_tag("egg_plant.jpg", class: "small")
-  %li
-    Zucchini
-    %br/
-    = image_tag("zucchini.jpg", class: "small")
-  %li
-    Red Bell Peppers
-    %br/
-    = image_tag("red_peppers.jpg", class: "small")
-  %li
-    Spinach
-    %br/
-    = image_tag("spinach.jpg", class: "small")
-  %li
-    Carrots
-    %br/
-    = image_tag("carrots.jpg", class: "small")
+%p
+  = link_to 'Pricing and Availability',
+  category_path(Category.name_is('Veggies'), about: 'veggies'),
+  class: is_active?('categories', 'veggies')
+
 %ul.menu
   - @products.each do |product|
     = render 'products/list', product: product
-%p This is the veggies we are selling that I "leo" know of.
+%p These are the veggies we are selling that I "leo" know of.
 %p Made by the owners Leo, Gryphen, Dean, Daddy and Lisa!

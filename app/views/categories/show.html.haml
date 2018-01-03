@@ -1,6 +1,15 @@
-%h1
+%h1.center
   = @category.name
-  Products
+  Pricing and Availability
+
+- if @about == 'veggies'
+  %p
+    All our veggies are 100% organic. No chemical fertilizers or sprays are used at any time.
+
+- if @about == 'comics'
+  %p Inside the coloring books there are cool pictures to color and soon mazies!!!
+  %p We have fall coloring pages,summer ones,spring ones,and fun ones.
+  %p the fall one only out in fall
 
 %table
   %thead
@@ -15,15 +24,17 @@
       %th Discontinued on
       %th Image
       %th
-      %th
-      %th
+      - if user_signed_in?
+        %th
+        %th
 
   %tbody
     - @category.products.each do |product|
       = render 'products/table_data', product: product
 
-= link_to 'Edit', edit_category_path(@category)
+- if user_signed_in?
+  = link_to 'Edit', edit_category_path(@category)
+  \|
+= link_to 'All Categories', categories_path
 \|
-= link_to 'Back', categories_path
-\|
-= link_to 'Manage Products', products_path
+= link_to 'All Products', products_path

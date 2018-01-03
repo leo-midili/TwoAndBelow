@@ -5,8 +5,6 @@ Rails.application.routes.draw do
 
   get :about, to: 'sites#about'
   get :dad, to: 'sites#dad'
-  get :veggies, to: 'sites#veggies'
-  get :coloring_pages, to: "sites#coloring_pages"
   get :leo, to: 'sites#leo'
   get :gryphen, to: "sites#gryphen"
   get :dean, to: "sites#dean"

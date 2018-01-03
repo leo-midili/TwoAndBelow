@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_action :has_products?, only: [:destroy]
 
@@ -12,6 +12,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @about = params[:about]
   end
 
   # GET /categories/new

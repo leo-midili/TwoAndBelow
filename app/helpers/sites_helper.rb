@@ -1,6 +1,6 @@
 module SitesHelper
   def is_active?(controller, action)
-    if controller_name == controller && action_name == action
+    if controller_name == controller && action_name == action || @about == action
       'active'
     else
       'in-active'

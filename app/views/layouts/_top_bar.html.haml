@@ -6,10 +6,14 @@
   %ul.top-bar
     %li
       -# %a{:href => "veggies.html"} About the Veggies
-      = link_to 'About the Veggies', veggies_path, class: is_active?('sites', 'veggies')
+      = link_to 'About the Veggies',
+      category_path(Category.name_is('Veggies'), about: 'veggies'),
+      class: is_active?('categories', 'veggies')
     %li
       -# %a{:href => "coloring_books.html"} Coloring Books
-      = link_to "Coloring pages", coloring_pages_path , class: is_active?("sites", "coloring_books")
+      = link_to "Coloring pages",
+      category_path(Category.name_is('Comics'), about: 'comics'),
+      class: is_active?("categories", "comics")
     %li
       -# %a{:href => "about.html"} About us
       = link_to 'About', about_path, class: is_active?('sites', 'about')
