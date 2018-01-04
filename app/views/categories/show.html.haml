@@ -11,26 +11,27 @@
   %p We have fall coloring pages,summer ones,spring ones,and fun ones.
   %p the fall one only out in fall
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Description
-      %th Price
-      %th Category
-      %th Quantity
-      %th For sale
-      %th Available on
-      %th Discontinued on
-      %th Image
-      %th
-      - if user_signed_in?
+.table-overflow
+  %table
+    %thead
+      %tr
+        %th Name
+        %th Description
+        %th Price
+        %th Category
+        %th Quantity
+        %th For sale
+        %th Available on
+        %th Discontinued on
+        %th Image
         %th
-        %th
+        - if user_signed_in?
+          %th
+          %th
 
-  %tbody
-    - @category.products.each do |product|
-      = render 'products/table_data', product: product
+    %tbody
+      - @category.products.each do |product|
+        = render 'products/table_data', product: product
 
 - if user_signed_in?
   = link_to 'Edit', edit_category_path(@category)

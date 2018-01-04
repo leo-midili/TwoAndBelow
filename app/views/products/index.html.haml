@@ -1,25 +1,26 @@
 %h1.center Listing products
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Description
-      %th Price
-      %th Category
-      %th Quantity
-      %th For sale
-      %th Available on
-      %th Discontinued on
-      %th Image
-      %th
-      - if user_signed_in?
+.table-overflow
+  %table
+    %thead
+      %tr
+        %th Name
+        %th Description
+        %th Price
+        %th Category
+        %th Quantity
+        %th For sale
+        %th Available on
+        %th Discontinued on
+        %th Image
         %th
-        %th
+        - if user_signed_in?
+          %th
+          %th
 
-  %tbody
-    - @products.each do |product|
-      = render 'products/table_data', product: product
+    %tbody
+      - @products.each do |product|
+        = render 'products/table_data', product: product
 
 %br
 - if user_signed_in?

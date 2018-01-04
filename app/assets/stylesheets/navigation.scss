@@ -100,7 +100,7 @@
   }
 
   /* larger than small screens */
-  @media (min-width: 30em) {
+  @media (min-width: 800px) {
     &  .grid { /* nested grids */
       grid-row-gap: 10px;
     }
