@@ -17,4 +17,7 @@ class SitesController < ApplicationController
 
   def dean
   end
+
+  def funny_comics
+  end
 end

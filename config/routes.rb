@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get :gryphen, to: "sites#gryphen"
   get :dean, to: "sites#dean"
   get :admin, to: redirect('/users/sign_in')
-
+  get :funny_comics, to: "sites#funny_comics"
   resources :products
   resources :categories
 
