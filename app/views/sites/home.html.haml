@@ -18,14 +18,18 @@
   Here is the garden to make the veggies we are selling. 100% organic!
   %br/
   = image_tag("garden.jpg")
-  %h2 What we're growing
+%h2 What we're growing
 %p
   = link_to 'Pricing and Availability',
   category_path(Category.name_is('Veggies'), about: 'veggies'),
   class: is_active?('categories', 'veggies')
-
-%ul.menu
-  - @products.each do |product|
-    = render 'products/list', product: product
+- if @products.any?
+  %ul.menu
+    - @products.each do |product|
+      = render 'products/list', product: product
+- else
+  .out-of-season
+    %h3 Out of Season
+    %p - will be available late spring
 %p These are the veggies we are selling that I "leo" know of.
 %p Made by the owners Leo, Gryphen, Dean, Daddy and Lisa!

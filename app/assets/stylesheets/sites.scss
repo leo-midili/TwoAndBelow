@@ -85,3 +85,14 @@ img.cover {
 .table-overflow {
   overflow-x: auto;
 }
+
+.out-of-season {
+  display: inline;
+  background-color: #767676;
+  padding: 10px;
+  border-radius: 5px;
+  h3, p {
+    display: inline-block;
+    color: #e6e6e6;
+  }
+}
