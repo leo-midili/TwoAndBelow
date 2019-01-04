@@ -20,3 +20,6 @@
 
 # Ignore local environment variables
 .env
+
+ASDF ruby manager
+.tool-versions

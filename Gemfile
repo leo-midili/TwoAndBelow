@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.6.0'
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -7,9 +9,9 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.2.2'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.21'
+gem 'pg', '~> 1.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -37,9 +39,9 @@ gem 'haml-rails', '~> 1.0.0'
 gem 'devise'
 
 # shrine
-gem 'shrine', '~> 2.8.0'
-gem 'image_processing', '~> 0.4.5'
-gem 'mini_magick', '~> 4.8.0'
+gem 'shrine', '~> 2.14.0'
+gem 'image_processing', '~> 1.7.1'
+gem 'mini_magick', '~> 4.9.2'
 gem 'fastimage', '~> 2.1.0'
 gem 'aws-sdk', '~> 3'
 
@@ -47,18 +49,14 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
+  gem 'capybara', '~> 3.12'
   gem 'selenium-webdriver'
-
-  # Coffee script 1.12.2 doesn't play well with Windows
-  # On my Windows 7 machine, using version 1.8.0 solves this problem
-  gem 'coffee-script-source', '1.8.0', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
   # Conver html into haml
   gem 'html2haml' ,'~> 2.2.0'
 
   # Load the .env files
-  gem 'dotenv-rails', '~> 2.2.1'
+  gem 'dotenv-rails', '~> 2.5.0'
 end
 
 group :development do
@@ -66,8 +64,3 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen'
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'wdm', '>= 0.1.0'
-ruby '2.4.3'
