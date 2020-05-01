@@ -4,7 +4,6 @@ class Product < ApplicationRecord
   before_validation :set_quantity_if_null
   before_validation :set_price_if_null
 
-  include ImageUploader::Attachment.new(:image)
 
   validates :name, presence: true
   validates :price, numericality: true

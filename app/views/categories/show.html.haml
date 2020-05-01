@@ -22,14 +22,6 @@
         %th Available on
         %th Discontinued on
         %th Image
-        %th
-        - if user_signed_in?
-          %th
-          %th
-          - if user_signed_in?
-            %th
-            %th
-
       %tbody
         - @category.products.each do |product|
           = render 'products/table_data', product: product

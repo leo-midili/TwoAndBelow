@@ -1,19 +1,15 @@
-#nav
-  %ul.top-bar-title
-    %li
-      -# %a.active{:href => "index.html"} Home
-      = link_to 'Home', root_path, class: is_active?('sites', 'home')
-  %ul.top-bar
-    %li
-      -# %a{:href => "veggies.html"} About the Veggies
-      = link_to 'About the Veggies',
-      category_path(Category.name_is('Veggies'), about: 'veggies'),
-      class: is_active?('categories', 'veggies')
-    %li
-      -# %a{:href => "coloring_books.html"} Coloring Books
-      = link_to "Coloring pages",
-      category_path(Category.name_is('Comics'), about: 'comics'),
-      class: is_active?("categories", "comics")
-    %li
-      -# %a{:href => "about.html"} About us
-      = link_to 'About', about_path, class: is_active?('sites', 'about')
+.top-bar
+  .top-bar-left
+    %ul.dropdown.menu{"data-dropdown-menu" => ""}
+      %li
+        %h4= link_to 'Home', root_path
+  .top-bar-right
+    %ul.menu
+      %li= link_to 'About the Veggies', category_path(Category.name_is('Veggies'), about: 'veggies')
+      %li
+        = link_to "Coloring pages", category_path(Category.name_is('Comics'), about: 'comics')
+      %li= link_to 'About', about_path, class: is_active?('sites', 'about')
+      - if user_signed_in?
+        %li= link_to 'Products', products_path
+        %li= link_to 'Categories', categories_path
+        %li= link_to 'Sign out', destroy_user_session_path, method: :delete

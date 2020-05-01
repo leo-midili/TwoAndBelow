@@ -1,14 +1,15 @@
 !!!
 %html
   %head
+    %meta{charset: 'utf-8'}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    = favicon_link_tag 'favicon.ico'
     %title 2 and below
+    = favicon_link_tag asset_pack_path('media/images/favicon.ico')
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': true
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render 'layouts/top_bar'
-    = render 'layouts/admin' if user_signed_in?
     = render 'layouts/flash_messages'
-    = yield
+    .grid-container
+      = yield
