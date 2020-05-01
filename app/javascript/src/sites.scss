@@ -59,10 +59,10 @@ ul.menu li:last-child {
 
 /* Create a box around objects */
 .box {
+  @include callout-base;
   background-color: #444;
   color: #fff;
   border-radius: 5px;
-  padding: 20px;
 }
 
 /* Center text objects with entire page */

@@ -7,7 +7,9 @@
   %td= product.for_sale
   %td= product.available_on
   %td= product.discontinued_on
-  %td= image_tag product.image_url(:thumb), class: 'cover' if product.image_data?
+  %td
+    - if product.picture.attached?
+      = image_tag product.picture.variant(resize: "200x200")
   %td= link_to 'Show', product
   - if user_signed_in?
     %td= link_to 'Edit', edit_product_path(product)

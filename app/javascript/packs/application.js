@@ -21,6 +21,8 @@ $(document).on('turbolinks:load', function() {
   $(document).foundation()
 });
 
+import 'packs/direct_upload'
+
 // Custom scss files.
 import 'src/application'
 

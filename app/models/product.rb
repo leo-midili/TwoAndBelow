@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   before_validation :set_quantity_if_null
   before_validation :set_price_if_null
 
+  has_one_attached :picture
 
   validates :name, presence: true
   validates :price, numericality: true

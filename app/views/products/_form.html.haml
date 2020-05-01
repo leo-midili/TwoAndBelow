@@ -5,22 +5,21 @@
       %ul
         - @product.errors.full_messages.each do |message|
           %li= message
-  -# Required by shrine to display cached images on page reloads
-  = f.hidden_field :image, value: f.object.cached_image_data
   .grid
     .span-2
       .box
         .field
-          = f.label :image, 'Upload image'
-          = f.file_field :image
+          = f.label :picture, 'Upload image'
+          = f.file_field :picture, direct_upload: true
 
-        - if f.object.image_data?
+        - if f.object.picture.attached?
           .field
-            = image_tag f.object.image_url(:medium)
-          .field
-            = f.label :remove_image do
-              = f.check_box :remove_image
-              Remove image
+            = image_tag f.object.picture.variant(resize: "200x200")
+          -# .field
+          -#   = f.label :remove_image do
+          -#     = f.check_box :remove_image
+          -#     Remove image
+    %br/
     .span-4
       .box
         .grid
