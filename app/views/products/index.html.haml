@@ -7,12 +7,12 @@
         %th Name
         %th Description
         %th Price
-        %th Category
         %th Quantity
         %th For sale
         %th Available on
         %th Discontinued on
         %th Image
+        %th Show
     %tbody
       - @products.each do |product|
         = render 'products/table_data', product: product

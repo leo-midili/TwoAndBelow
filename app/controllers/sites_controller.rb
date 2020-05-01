@@ -6,18 +6,4 @@ class SitesController < ApplicationController
   def about
   end
 
-  def dad
-  end
-
-  def leo
-  end
-
-  def gryphen
-  end
-
-  def dean
-  end
-
-  def funny_comics
-  end
 end

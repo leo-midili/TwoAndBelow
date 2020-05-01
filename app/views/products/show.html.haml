@@ -1,31 +1,27 @@
 %h1.center= @product.name
-.grid
-  .span-2
+.grid-x
+  .medium-6.cell
     .box
-      = image_tag @product.image_url(:medium) if @product.image_data?
-  .span-4
-    .box
-      .grid
-        .span-3
-          %p
-            %b Description:
-            = @product.description
-          %p
-            %b Price:
-            = number_to_currency(@product.price)
-          %p
-            %b Quantity:
-            = @product.quantity
-        .span-3
-          %p
-            %b Category:
-            = @product.category.name
-          %p
-            = currently_for_sale(@product.for_sale)
-          %p
-            %b Available from:
-            %span.one-line-text #{@product.available_on} -
-            %span.one-line-text= @product.discontinued_on
+      = image_tag @product.picture.variant(resize: "200x200") if @product.picture.attached?
+  .medium-6.cell
+    %p
+      %b Description:
+      = @product.description
+    %p
+      %b Price:
+      = number_to_currency(@product.price)
+    %p
+      %b Quantity:
+      = @product.quantity
+    %p
+      %b Category:
+      = @product.category.name
+    %p
+      = currently_for_sale(@product.for_sale)
+      %p
+        %b Available from:
+        %span.one-line-text #{@product.available_on} -
+        %span.one-line-text= @product.discontinued_on
 
 
 - if user_signed_in?

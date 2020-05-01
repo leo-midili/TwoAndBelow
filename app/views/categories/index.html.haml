@@ -1,4 +1,4 @@
-%h1.center Listing categories
+%h1.center Listing Categories
 
 - if user_signed_in?
   .table-overflow
@@ -6,9 +6,9 @@
       %thead
         %tr
           %th Name
-          %th
-          %th
-          %th
+          %th Show
+          %th Edit
+          %th Destroy
 
       %tbody
         - @categories.each do |category|

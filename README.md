@@ -1,4 +1,3 @@
 # Two and Below
-This is my first time making a Ruby on Rails app. I am converting
-one of my html sites to RoR.
-I am having fun learning.
+
+#### This is my First site made in 2016 or 2017

@@ -1,4 +1,4 @@
-%h1 Two And Below
+%h1 $2 And Below
 %p What Gryphen and I have in our stand is pictures, colored rocks, articles, and veggies.
 %p Don't be mad if our stand is closed come on a Saturday.
 %br/
@@ -10,25 +10,18 @@
       %iframe{allowfullscreen: "", frameborder: "0", height: "300", :width => "400",
       src: google_map_image, style: "border:0; pointer-events:none;"}
 %br/
-%p
-  = image_pack_tag('stand.jpg')
 %p You can come to our stand and buy any thing, just bring cash, no credit cards, just cash.
-%p mybe we will be colsed when there is snow
-%p
-  Here is the garden to make the veggies we are selling. 100% organic! no image right now
-  %br/
+%br/
 %h2 What we're growing
 %p
   = link_to 'Pricing and Availability',
-  category_path(Category.name_is('Veggies'), about: 'veggies'),
-  class: is_active?('categories', 'veggies')
+  category_path(Category.name_is('Veggies'), about: 'veggies')
 - if @products.any?
   %ul.menu
     - @products.each do |product|
       = render 'products/list', product: product
 - else
-  .out-of-season
+  .callout
     %h3 Out of Season
     %p - will be available late spring
-%p These are the veggies we are selling that I "leo" know of.
-%p Made by the owners Leo, Gryphen, Dean, Daddy and Lisa!
+%p These are the veggies we are selling.

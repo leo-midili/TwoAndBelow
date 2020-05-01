@@ -4,12 +4,7 @@ Rails.application.routes.draw do
   root to: 'sites#home'
 
   get :about, to: 'sites#about'
-  get :dad, to: 'sites#dad'
-  get :leo, to: 'sites#leo'
-  get :gryphen, to: "sites#gryphen"
-  get :dean, to: "sites#dean"
   get :admin, to: redirect('/users/sign_in')
-  get :funny_comics, to: "sites#funny_comics"
   resources :products
   resources :categories
 
