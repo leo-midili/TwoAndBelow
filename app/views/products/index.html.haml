@@ -13,6 +13,8 @@
         %th Discontinued on
         %th Image
         %th Show
+        %th Edit
+        %th Destroy
     %tbody
       - @products.each do |product|
         = render 'products/table_data', product: product
