@@ -21,9 +21,6 @@
 # Ignore local environment variables
 .env
 
-ASDF ruby manager
-.tool-versions
-
 /public/packs
 /public/packs-test
 /node_modules
